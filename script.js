@@ -68,7 +68,7 @@ function displaySimilarResults(images) {
 
     new Splide('.splide', {
         type: 'loop',
-        perPage: 3,
+        perPage: 4,
         autoplay: true,
         arrowPath: 'M14 2l-1.41 1.41L7.83 8H20v2H7.83l4.76 4.59L14 18l-8-8z', // Ensure this path is correct
         arrowColor: 'grey',
