@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Top Bar -->
+    <div class="bg-black h-5 flex items-center justify-center">
+        <p class="text-white text-xs">SUPER SALE UP TO 40% OFF</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6 ml-10">
+                <a href="#" class="text-lg font-semibold">Shop</a>
+                <a href="#" class="text-lg font-semibold">Community</a>
+            </div>
+            <div class="text-center mr-6">
+                <img src="logo.png" alt="Logo" class="h-10">
+            </div>
+            <div class="flex items-center space-x-4 mr-14">
+                <a href="#" class="text-lg font-semibold">
+                    <img src="acc.png" alt="Account" class="h-6">
+                </a>
+                <a href="#" class="text-lg font-semibold">
+                    <img src="search.png" alt="Search" class="h-6">
+                </a>
+                <a href="#" class="text-lg font-semibold">
+                    <img src="bag.png" alt="Bag" class="h-6">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Poster Section -->
+    <div class="relative bg-cover bg-center" style="background-image: url('poster.png'); height: 500px;">
+        <div class="absolute left-0 bottom-0 p-8">
+            <h1 class="text-4xl text-white font-bold">STOCK PHOTOS</h1>
+            <p class="text-white mt-2 max-w-md">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
+            <button class="mt-4 bg-red-600 text-white px-4 py-2 flex items-center">
+                <img src="play.png" alt="Play" class="h-4 mr-2">EXPLORE
+            </button>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+<div class="container mx-auto py-8">
+    <div class="flex justify-center">
+        <div class="relative w-80"> <!-- Adjust width as needed -->
+            <input id="searchInput" type="text" placeholder="Laptop..." class="border-2 border-red-600 w-full py-2 px-4 pr-12 rounded-md">
+            <button id="searchButton" class="absolute right-0 top-1/2 transform -translate-y-1/2  text-white px-3 py-2 rounded-md">
+                <img src="search.png" alt="Search" class="h-4">
+            </button>
+        </div>
+    </div>
+    <div id="searchResults" class="mt-8"></div>
+</div>
+
+    <!-- Similar Results Section -->
+    <div class="container mx-auto py-8">
+        <h2 class="text-2xl font-semibold mb-4">Similar Results</h2>
+        <div id="similarResults" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="container mx-auto py-8">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-semibold">Favorites</h2>
+            <button id="sortButton" class="flex items-center text-red-600">
+                <span>Sort</span>
+                <img src="down-arrow.png" alt="Sort" class="h-4 ml-2">
+            </button>
+        </div>
+        <div id="favoritesSection" class="grid grid-cols-3 gap-4"></div>
+    </div>
+
+    <div class="sort-filter-container">
+        <select id="sortDropdown" class="bg-white border rounded px-4 py-2">
+            <option value="">Sort/Filter by Title</option>
+        </select>
+    </div>
+</body>
+</html>
