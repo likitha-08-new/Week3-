@@ -9,9 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
+
 <body class="bg-gray-100">
     <!-- Top Bar -->
-    <div class="bg-black h-5 flex items-center justify-center">
+    <div class="bg-black h-10 flex items-center justify-center">
         <p class="text-white text-xs">SUPER SALE UP TO 40% OFF</p>
     </div>
 
@@ -65,7 +66,7 @@
 
     <!-- Similar Results Section -->
     <div class="container mx-auto py-8">
-        <h2 class="text-2xl font-semibold mb-4">Similar Results</h2>
+        <h2 class="text-2xl font-semibold ml-4 mb-4">Similar Results</h2>
         <div id="similarResults" class="splide">
             <div class="splide__track">
                 <ul class="splide__list"></ul>
@@ -76,19 +77,13 @@
     <!-- Favorites Section -->
     <div class="container mx-auto py-8">
         <div class="flex justify-between items-center mb-4">
-            <h2 class="text-2xl font-semibold">Favorites</h2>
+            <h2 class="text-2xl ml-4 font-semibold">Favorites</h2>
             <button id="sortButton" class="flex items-center text-red-600">
                 <span>Sort</span>
                 <img src="down-arrow.png" alt="Sort" class="h-4 ml-2">
             </button>
         </div>
         <div id="favoritesSection" class="grid grid-cols-3 gap-4"></div>
-    </div>
-
-    <div class="sort-filter-container">
-        <select id="sortDropdown" class="bg-white border rounded px-4 py-2">
-            <option value="">Sort/Filter by Title</option>
-        </select>
     </div>
 </body>
 </html>
