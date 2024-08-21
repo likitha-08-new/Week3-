@@ -1,6 +1,6 @@
 const apiKey = 'QZUxKwDzD80CpusWnBkkzSDgfJfy3I97zwuL9bWqsZUjxoEsOdiDYBhM';
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-let searchResultsImages = []; // To store search results images
+let searchResultsImages = [];
 
 window.onload = async () => {
     await searchImages('laptops');
@@ -70,7 +70,7 @@ function displaySimilarResults(images) {
         type: 'loop',
         perPage: 4,
         autoplay: true,
-        arrowPath: 'M14 2l-1.41 1.41L7.83 8H20v2H7.83l4.76 4.59L14 18l-8-8z', // Ensure this path is correct
+        gap: "1rem",
         arrowColor: 'grey',
         pagination: false,
     }).mount();
